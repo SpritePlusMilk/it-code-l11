@@ -1,0 +1,11 @@
+{% extends 'core/based.html'%}
+{% block content%}
+
+<form action = "{% url 'core:cl_delete' client.id%}" method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit" class="btn btn-outline-primary">Удалить {{client.login}}? </button>
+</form>
+
+
+{% endblock %}

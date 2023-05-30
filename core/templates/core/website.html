@@ -1,0 +1,12 @@
+{% extends 'core/based.html'%}
+{% block content%}
+
+
+<h1>Данные о сайте {{website.name}}:</h1>
+<p>Адрес: {{website.address}}</p>
+<p>Логин владельца: {{website.owner.login}}</p>
+<p>Аренда заканчивается: {{website.expires}}</p>
+
+<a href="{% url 'core:ws_list' %}"><button type="button" class="btn btn-outline-primary">Назад</button></a>
+
+{% endblock %}

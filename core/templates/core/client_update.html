@@ -1,0 +1,10 @@
+{% extends 'core/based.html'%}
+{% block content%}
+
+<form action = "{% url 'core:cl_update' client.id %}" method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit"> Добавить</button>
+</form>
+
+{% endblock %}

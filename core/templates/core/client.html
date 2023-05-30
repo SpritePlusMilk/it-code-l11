@@ -1,0 +1,10 @@
+{% extends 'core/based.html'%}
+{% block content%}
+
+    <h1>{{client.login}}</h1>
+    <h2>{{client.dns_server}}</h2>
+<a href="{% url 'core:cl_list' %}"><button type="button" class="btn btn-outline-primary">Назад</button></a>
+<a href="{% url 'core:cl_update' client.id %}"><button type="button" class="btn btn-outline-primary">Обновить</button></a>
+<a href="{% url 'core:cl_delete' client.id %}"><button type="button" class="btn btn-outline-primary">Удалить</button></a>
+
+{% endblock %}
